@@ -12,11 +12,15 @@
   $inspect(items_mutable);
 </script>
 
+<!-- Inputs Element to change the Items_mutable Variable -->
+<p>Items_mutable</p>
 <div>
   {#each items_mutable as item}
     <input bind:value={item.name} type="text" />
   {/each}
 </div>
+
+<!-- 3 Tables to show Diffrent Stratergies -->
 <div>
   <table>
     <caption>Items : </caption>
