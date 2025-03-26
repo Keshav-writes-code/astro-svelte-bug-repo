@@ -5,7 +5,9 @@
     }[];
   };
   let { items }: Props = $props();
-  let items_mutable = items;
+  let items_mutable = $state(items);
+  let items_mutable_2 = $state($state.snapshot(items));
+
   $inspect(items);
   $inspect(items_mutable);
 </script>
@@ -32,6 +34,17 @@
     <caption>Items_mutable : </caption>
     <tbody>
       {#each items_mutable as item, i}
+        <tr>
+          <td>{i} </td>
+          <td>{item.name} </td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
+  <table>
+    <caption>Items_mutable : </caption>
+    <tbody>
+      {#each items_mutable_2 as item, i}
         <tr>
           <td>{i} </td>
           <td>{item.name} </td>
