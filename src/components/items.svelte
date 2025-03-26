@@ -46,7 +46,7 @@
     </tbody>
   </table>
   <table>
-    <caption>Items_mutable : </caption>
+    <caption>Items_mutable 2: </caption>
     <tbody>
       {#each items_mutable_2 as item, i}
         <tr>
