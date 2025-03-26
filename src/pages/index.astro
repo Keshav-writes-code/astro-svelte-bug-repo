@@ -1,11 +1,17 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
+import Items from '../components/items.svelte'
+let items = [
+  {name: "item1"},
+  {name: "item2"},
+  {name: "item3"},
+  {name: "item4"},
+  {name: "item5"},
+]
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <Items client:load items={items} />
 </Layout>
